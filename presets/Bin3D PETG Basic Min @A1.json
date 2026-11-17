@@ -1,0 +1,11 @@
+{
+    "type": "filament",
+    "name": "Bin3D PETG Basic Min @A1",
+    "inherits": "Bambu PETG Basic @BBL A1",
+    "from": "User",
+    "instantiation": "true",
+    "filament_settings_id": ["Bin3D PETG Basic Min @A1"],
+    "filament_max_volumetric_speed": ["10"],
+    "filament_retraction_length": ["0.6"],
+    "compatible_printers": ["Bambu Lab A1 0.4 nozzle"]
+}
