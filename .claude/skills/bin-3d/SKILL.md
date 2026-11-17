@@ -68,6 +68,14 @@ Chi tiết và nguồn: `reference/official-defaults.md`. Preset nhập sẵn: `
 4. Vùng tường mỏng/đổi tốc độ: Process → Speed → bật **Slow down for overhangs**; giảm khác biệt tốc độ giữa inner/outer wall.
 5. Infill lộ qua tường: Wall loops 3–4, Infill/wall overlap 15%.
 
+### E. Logo/hoa văn nhiều màu (inlay) bị nhạt, loang màu, viền dư nhựa
+1. Đo độ dày phần logo: dưới 0.8 mm thì màu nền (nhất là đỏ/đen) xuyên qua màu sáng. Làm logo **dày 0.8–1.0 mm** (4–5 lớp), giữ nguyên mặt trên, kéo sâu xuống phía dưới.
+2. Mặt trên logo/sàn phải **trùng ranh giới lớp**: với lớp đầu 0.2 mm, độ cao Z phải bằng 0.2 + n × layer height. Ví dụ mặt 3.0 mm: dùng 0.2 mm (khớp), 0.16 mm thì lệch (lớp cắt ngang giữa).
+3. Tăng xả màu: Flushing volumes → Multiplier 1.0 → 1.2 khi đổi từ màu đậm sang màu sáng.
+4. PETG dư nhựa quanh logo: về nhiệt chính hãng 245 °C (không 260), flow 0.94, max volumetric 10; bật Avoid crossing walls.
+5. Không bật Ironing cho mặt nhiều màu (dễ kéo màu này lem sang màu kia).
+6. Sửa file .3mf bằng script: phần nằm trong `3D/Objects/*.model` (đỉnh) + `transform` trong `3D/3dmodel.model`; khóa `matrix` trong `model_settings.config` chỉ là thông tin nguồn, không quyết định vị trí.
+
 ## 3. Mẫu trả lời chuẩn của Bin 3D
 ```
 🔎 Lỗi: <tên lỗi>
